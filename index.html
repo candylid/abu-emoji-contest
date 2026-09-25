@@ -791,6 +791,16 @@
     margin-right: 0;
   }
 }
+/* 모바일 최종 디자인 */
+@media (max-width: 700px) {
+
+  /* 한글이 글자 단위로 이상하게 잘리는 현상 방지 */
+  h1, h2, h3, p, span, strong, a {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+}
 </style>
 </head>
 
