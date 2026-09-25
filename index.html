@@ -1103,7 +1103,7 @@ Discord Emoji Maker에 업로드하면<br>
             </p>
 
             <button
-              onclick="navigator.clipboard.writeText(document.getElementById('teed-gif-prompt').innerText)"
+              onclick="copyTeedPrompt(this)"
               style="
                 margin-top: 20px;
                 background: #ffd84d;
@@ -1674,6 +1674,36 @@ Discord Emoji Maker에 업로드하면<br>
   <footer>
     Arty & Banana University · Emoji Contest
   </footer>
+<script>
+  function copyTeedPrompt(button) {
+    const text = document.getElementById('teed-gif-prompt').innerText;
 
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => {
+        showCopied(button);
+      });
+    } else {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      document.execCommand('copy');
+      textarea.remove();
+      showCopied(button);
+    }
+  }
+
+  function showCopied(button) {
+    const originalText = button.innerText;
+    button.innerText = '복사 완료 ✓';
+
+    setTimeout(() => {
+      button.innerText = originalText;
+    }, 1500);
+  }
+</script>
 </body>
 </html>
