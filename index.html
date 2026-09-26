@@ -875,7 +875,11 @@ max-width: 1200px;
 /* 모바일 Teed 이미지 팝업 확대 */
 @media (max-width: 700px) {
   .teed-zoom {
-    cursor: zoom-in;
+   cursor: zoom-in;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+user-select: none;
+-webkit-user-drag: none;
   }
 
   .teed-zoom.zoomed {
