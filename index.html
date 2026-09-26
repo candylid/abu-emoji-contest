@@ -885,7 +885,7 @@ max-width: 1200px;
     width: auto !important;
     max-width: none !important;
     font-size: 19px !important;
-    line-height: 1.2 !important;
+    line-height: 1.2 !important;  
     white-space: nowrap !important;
     word-break: keep-all !important;
     overflow-wrap: normal !important;
@@ -896,6 +896,29 @@ max-width: 1200px;
   #start .card p {
     display: none !important;
   }
+  #start .card-main {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+}
+
+#start .card-main .card-emoji {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+}
+
+#start .card-main h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 19px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  transform: none !important;
+}
 }
 
   
@@ -1014,10 +1037,10 @@ user-select: none;
 
           <div>
             <div class="card-number">01 · EASY</div>
-            <div class="card-emoji">🖼️</div>
-
-            <h3>사진으로 만들기</h3>
-
+          <div class="card-main">
+  <div class="card-emoji">🖼️</div>
+  <h3>사진으로 만들기</h3>
+</div>
             <p>
               가지고 있는 사진 한 장으로
               가장 간단하게 이모지를 만들어봅니다.
