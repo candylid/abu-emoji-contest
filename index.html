@@ -872,7 +872,7 @@ max-width: 1200px;
     margin: 0 !important;
   }
 }
-/* 모바일 Teed 이미지 확대 */
+/* 모바일 Teed 이미지 팝업 확대 */
 @media (max-width: 700px) {
   .teed-zoom {
     cursor: zoom-in;
@@ -880,18 +880,25 @@ max-width: 1200px;
 
   .teed-zoom.zoomed {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
+    top: 50%;
+    left: 50%;
+    width: 94vw !important;
+    height: auto !important;
+    max-height: 90vh;
     object-fit: contain;
+    transform: translate(-50%, -50%);
     margin: 0 !important;
-    padding: 16px;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.92);
-    border-radius: 0 !important;
-    z-index: 9999;
+    z-index: 10001;
+    border-radius: 12px !important;
     cursor: zoom-out;
+  }
+
+  body:has(.teed-zoom.zoomed)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 10000;
   }
 }
 </style>
