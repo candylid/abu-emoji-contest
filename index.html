@@ -872,6 +872,28 @@ max-width: 1200px;
     margin: 0 !important;
   }
 }
+/* 모바일 Teed 이미지 확대 */
+@media (max-width: 700px) {
+  .teed-zoom {
+    cursor: zoom-in;
+  }
+
+  .teed-zoom.zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 16px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.92);
+    border-radius: 0 !important;
+    z-index: 9999;
+    cursor: zoom-out;
+  }
+}
 </style>
 </head>
 
@@ -1055,6 +1077,7 @@ Discord Emoji Maker에 업로드하면<br>
   </div>
 </a>
 <img
+class="teed-zoom"
 src="images/teed-emoji-maker (1).png"
     alt="Discord Emoji Maker 시작 화면"
     style="
@@ -1075,6 +1098,7 @@ src="images/teed-emoji-maker (1).png"
                 </div>
             </div>
 <img
+class="teed-zoom"
   src="images/teed-photo-upload (1).png"
     alt="사진 업로드 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
@@ -1089,6 +1113,7 @@ src="images/teed-emoji-maker (1).png"
                 </div>
             </div>
 <img
+class="teed-zoom"
 src="images/teed-emoji-result (1).png"
     alt="완성된 이모지 결과 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
@@ -1103,6 +1128,7 @@ src="images/teed-emoji-result (1).png"
                 </div>
             </div>
 <img
+class="teed-zoom"
 src="images/teed-emoji-save.png"
     alt="완성된 이모지 저장 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
@@ -1762,6 +1788,15 @@ src="images/teed-emoji-save.png"
       button.innerText = originalText;
     }, 1500);
   }
+</script>
+<script>
+  document.querySelectorAll('.teed-zoom').forEach(function(image) {
+    image.addEventListener('click', function() {
+      if (window.innerWidth <= 700) {
+        image.classList.toggle('zoomed');
+      }
+    });
+  });
 </script>
 </body>
 </html>
