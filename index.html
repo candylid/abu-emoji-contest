@@ -1079,6 +1079,84 @@ user-select: none;
     max-width: none;
   }
 }
+.share-after-submit button {
+  width: auto !important;
+  padding: 7px 12px !important;
+  margin-top: 10px !important;
+  font-size: 12px !important;
+}
+
+.share-after-submit > a {
+  display: block;
+  width: fit-content;
+  margin: 18px auto 0;
+}
+/* 제출 / 공유 영역 최종 정리 */
+.share-after-submit {
+  margin-top: 14px;
+}
+
+.submit-box .button,
+.share-main-button {
+  width: 100% !important;
+  max-width: 560px !important;
+  min-height: 64px;
+  margin: 12px auto 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* 네이비 박스 밖 인증 안내 */
+.share-copy-area {
+  text-align: center;
+  padding: 24px 18px 8px;
+  color: var(--navy);
+}
+
+.share-copy-area p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.share-copy-button {
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+/* 감사하기 버튼 글자 */
+.thanks-links .button {
+  color: #111 !important;
+}
+.share-copy-area {
+  color: white !important;
+}
+
+.share-copy-area p {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 13px !important;
+}
+
+.share-copy-text {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+}
 </style>
 </head>
 
@@ -1932,34 +2010,34 @@ src="images/teed-emoji-save.png"
         이모지 제출하기 ↗
       </a>
 
-      <div class="share-after-submit">
-  <h3>🚀 완성작을 예술해방에도 공유해보세요!</h3>
-
-  <p>
-    아래 인증 문구를 복사해서<br>
-    완성한 이미지/GIF와 함께 공유해주세요.
-  </p>
-
-  <div id="share-text" class="share-template">### 날짜 닉네임
-Arty & Banana 이모지 콘테스트에 참여해서
-나만의 이모지를 만들어봤어요! 🎨</div>
-
-  <button
-    class="button secondary"
-    onclick="copyShareText(this)"
-    type="button"
-  >
-    📋 인증 문구 복사하기
-  </button>
+   <div class="share-after-submit">
 
   <a
     href="https://discord.com/channels/1164786874213203999/1292758591870337095"
     target="_blank"
-    class="button primary"
+    class="button primary share-main-button"
   >
     예술해방에서 공유하기 ↗
   </a>
+
 </div>
+
+<div class="share-copy-area">
+  <p>
+    완성한 이미지/GIF와 함께 예술해방에 공유해주세요.<br>
+    아래 문구를 누르면 바로 복사할 수 있어요.
+  </p>
+
+  <button
+    type="button"
+    class="share-copy-text"
+    onclick="copyShareText(this)"
+  >
+    <span id="share-text">### 날짜 닉네임<br>
+Arty & Banana 이모지 콘테스트에 참여해서<br>
+나만의 이모지를 만들어봤어요! 🎨</span>
+  </button>
+</div> 
 
     </div>
 
