@@ -838,7 +838,40 @@ max-width: 1200px;
 }
 }
 }
+/* 모바일 START 카드 최종 설정 */
+@media (max-width: 700px) {
 
+  #start .card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 22px 24px !important;
+
+    display: grid !important;
+    grid-template-columns: 52px 1fr !important;
+    align-items: center !important;
+    column-gap: 14px !important;
+  }
+
+  #start .card-number {
+    grid-column: 1 / -1 !important;
+    margin-bottom: 14px !important;
+  }
+
+  #start .card p {
+    display: none !important;
+  }
+
+  #start .card-emoji {
+    grid-column: 1 !important;
+    margin: 0 !important;
+    font-size: 38px !important;
+  }
+
+  #start .card h3 {
+    grid-column: 2 !important;
+    margin: 0 !important;
+  }
+}
 </style>
 </head>
 
@@ -920,7 +953,7 @@ max-width: 1200px;
 
           <div>
             <div class="card-number">01 · EASY</div>
-            <div class="card-emoji">📸</div>
+            <div class="card-emoji">🖼️</div>
 
             <h3>사진으로 만들기</h3>
 
@@ -937,7 +970,7 @@ max-width: 1200px;
 
           <div>
   <div class="card-number">02 · DRAW</div>
-<div class="card-emoji">✏️</div>
+<div class="card-emoji">🎨</div>
 
 <h3>직접 그려 만들기</h3>
 
@@ -954,7 +987,7 @@ max-width: 1200px;
 
           <div>
             <div class="card-number">03 · GIF</div>
-            <div class="card-emoji">🎞️</div>
+            <div class="card-emoji">✨</div>
 
             <h3>움직이는 이모지</h3>
 
@@ -971,7 +1004,7 @@ max-width: 1200px;
 
           <div>
             <div class="card-number">04 · SHARE</div>
-            <div class="card-emoji">🚀</div>
+            <div class="card-emoji">📤</div>
 
             <h3>완성하고 공유하기</h3>
 
@@ -1009,15 +1042,20 @@ Discord Emoji Maker에 업로드하면<br>
 
         <div class="steps">
 
-            <div class="step">
-                <div class="step-number">1</div>
-                <div>
-                    <strong>Discord Emoji Maker 열기</strong>
-                    <span>Teed가 공유한 Discord Emoji Maker를 열어주세요.</span>
-                </div>
-            </div>
+   <a
+  href="https://chatgpt.com/g/g-6880331ee5bc819191376bd7381588a5-discord-emoji-maker"
+  target="_blank"
+  class="step"
+  style="text-decoration: none; color: inherit; cursor: pointer;"
+>
+  <div class="step-number">1</div>
+  <div>
+    <strong>Discord Emoji Maker 열기 ↗</strong>
+    <span>Teed가 공유한 Discord Emoji Maker를 열어주세요.</span>
+  </div>
+</a>
 <img
-    src="images/teed-emoji-maker.png"
+src="images/teed-emoji-maker (1).png"
     alt="Discord Emoji Maker 시작 화면"
     style="
         width: 100%;
@@ -1037,7 +1075,7 @@ Discord Emoji Maker에 업로드하면<br>
                 </div>
             </div>
 <img
-    src="images/teed-photo-upload.png"
+  src="images/teed-photo-upload (1).png"
     alt="사진 업로드 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
 >
@@ -1051,7 +1089,7 @@ Discord Emoji Maker에 업로드하면<br>
                 </div>
             </div>
 <img
-    src="images/teed-emoji-result.png"
+src="images/teed-emoji-result (1).png"
     alt="완성된 이모지 결과 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
 >
@@ -1065,19 +1103,13 @@ Discord Emoji Maker에 업로드하면<br>
                 </div>
             </div>
 <img
-    src="images/teed-emoji-save.png"
+src="images/teed-emoji-save.png"
     alt="완성된 이모지 저장 화면"
     style="width: 100%; margin: 24px 0 48px; border-radius: 18px; display: block;"
 >
         </div>
 
-        <a
-            href="https://chatgpt.com/g/g-6880331ee5bc819191376bd7381588a5-discord-emoji-maker"
-            target="_blank"
-            class="button primary"
-        >
-            Discord Emoji Maker 열기 ↗
-        </a>
+      
 
     </div>
 </section>
